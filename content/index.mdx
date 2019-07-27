@@ -72,3 +72,52 @@ This project uses a development that that includes:
 
 The easiest place to start would be `theme.js`, which defines the site's theme
 using the [System UI Theme Specification](https://theme-ui.com/theme-spec).
+
+## Editing
+
+For editing, I recommend [Visual Studio Code](https://code.visualstudio.com/)
+(or VSCode).
+
+1. Install [VSCode](https://code.visualstudio.com/).
+2. In the VSCode menu, select **File > Open** and select your project's folder.
+3. To get help editing your `.mdx` files, install the
+   [MDX plugin](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx).
+4. Edit or add `.mdx` files in your projects `content` folder.
+
+To see your changes live in the browser, you can start the project on a
+development server. With the project folder open in VSCode:
+
+1. Open the integrated terminal by selecting **View > Terminal**.
+2. In the terminal, type `npm start` and press Enter.
+3. When the project is ready, open the url shown in your browser. Most likely,
+   this URL will be `http://localhost:8000/`.
+
+To stop your server, press `control + c` in the terminal or just close your
+VSCode window.
+
+## Publishing
+
+To publish this project on the web, run `npm run build` in the terminal. This
+will create a production-ready website in your project's `public` folder. You
+have many ways to share this folder with the web, but here's one:
+
+- Run `npm run build` to create your `public` folder.
+- Open your browser and visit [Netlify Drop](http://netlify.com/drop).
+- Open your project folder in Finder.
+- Drag the entire `public` folder onto the Netlify Drop page.
+
+This will create a hosted copy of your project. (The URL will be random, though
+you can change it under Site Settings.) You can read more about hosting on
+Netlify [here](https://www.gatsbyjs.org/docs/hosting-on-netlify/).
+
+## Contribution
+
+To contribute to this project, visit the
+[Github repository](https://github.com/steveruizok/quick-docs).
+
+You can tweet the author at [@steveruizok](http://twitter.com/steveruizok).
+
+Thanks to John Otander for his work with
+[gatsby-plugin-documentation](https://github.com/johno/gatsby-theme-documentation)
+and [MDX](https://github.com/mdx-js/mdx), and to and Brent Jackson for
+[Theme UI](https://github.com/system-ui/theme-ui).

@@ -12,17 +12,25 @@ const components = {
 
 const styles = {
 	alignItems: 'center',
+	justifyContent: 'center',
 	width: '100%',
 	m: 0,
+	pb: 0,
 	h1: {
 		m: 0,
 		fontSize: [3, 4],
-		p: [2],
+		px: [2, 0],
+		py: 2,
 		lineHeight: 1,
 		'& a': {
 			fontSize: [3, 4],
-			color: 'colors.text',
+			color: 'text',
+			px: [2, 0],
 		},
+	},
+	a: {
+		px: 3,
+		mr: -3,
 	},
 	ul: {
 		my: 0,
@@ -30,11 +38,7 @@ const styles = {
 		display: 'flex',
 		listStyleType: 'none',
 	},
-	li: {
-		my: 0,
-		ml: 3,
-	},
-	pb: [0, 2],
+	li: {},
 }
 
 export default ({ menuOpen, setMenuOpen, nav }) => {
@@ -42,15 +46,27 @@ export default ({ menuOpen, setMenuOpen, nav }) => {
 		<Header>
 			<Container
 				sx={{
-					px: [1, 3],
-					position: ['fixed', 'static'],
+					mx: [0, 'auto'],
+					px: [1, 4],
+					py: 0,
+					position: ['fixed', 'relative'],
 					top: 0,
 					left: 0,
 					backgroundColor: '#FFFFFF',
-					borderBottom: '1px solid #666',
 				}}
 			>
-				<Flex sx={{ justifyContent: 'space-between', pt: [1, 2], px: [3, 0] }}>
+				<Flex
+					sx={{
+						justifyContent: 'space-between',
+						pt: [0, 2],
+						px: [3, 0],
+						py: [2, 3],
+						height: '100%',
+						borderColor: 'text',
+						borderBottomStyle: 'solid',
+						borderBottomWidth: '1px',
+					}}
+				>
 					<Flex sx={styles}>
 						<MenuButton
 							sx={{ mr: 2 }}

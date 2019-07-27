@@ -26,7 +26,7 @@ export default {
 	},
 	fonts: {
 		body: 'system-ui, sans-serif',
-		heading: 'Roboto',
+		heading: 'system-ui, sans-serif',
 		monospace: 'Roboto Mono, Menlo, monospace',
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],

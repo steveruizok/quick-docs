@@ -6,6 +6,7 @@ import { Styled, Layout, Main, Container, jsx, useThemeUI } from 'theme-ui'
 
 import Header from './header'
 import Sidenav from './sidenav'
+import Footer from './footer'
 
 export default ({ children }) => {
 	const { theme } = useThemeUI()
@@ -40,9 +41,10 @@ export default ({ children }) => {
 								onClick={() => setMenuOpen(false)}
 							/>
 							<div
-								sx={{ px: [3, 0], width: '100%', overflow: 'hidden', mb: 6 }}
+								sx={{ px: [3, 0], width: '100%', overflow: 'hidden', mb: 2 }}
 							>
 								{children}
+								<Footer />
 							</div>
 						</div>
 					</Container>

@@ -17,10 +17,10 @@ export default React.forwardRef((props, ref) => (
 			width: 208,
 			mr: 3,
 			flex: 'none',
-			px: 3,
+			px: 4,
 			pt: 3,
 			pb: 4,
-			mt: [73, 0],
+			mt: [53, 0],
 		}}
 	>
 		<Content />
