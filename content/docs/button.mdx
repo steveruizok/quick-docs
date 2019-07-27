@@ -1,0 +1,24 @@
+# Button
+
+A Button is something to click on.
+
+| Prop     | Type     | Default   |
+| -------- | -------- | --------- |
+| `intent` | `string` | "primary" |
+| `icon`   | `string` | null      |
+
+## Example
+
+```js
+import React from 'react'
+import { Button } from './Button'
+
+export function Landing() {
+	return (
+		<div>
+			<Button intent="primary">Get started</Button>
+			<Button intent="secondary" icon="home" />
+		</div>
+	)
+}
+```
