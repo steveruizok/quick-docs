@@ -5,6 +5,7 @@ let basePath
 let contentPath
 
 const DocTemplate = require.resolve('./src/templates/doc')
+const EmptyTemplate = require.resolve(`./src/templates/404`)
 
 const mdxResolverPassthrough = (fieldName) => async (
 	source,
@@ -161,8 +162,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 		const next = index === 0 ? null : docs[index - 1]
 		const { slug } = doc
 
-		console.log(path.parse(slug))
-
 		createPage({
 			path: slug,
 			component: DocTemplate,
@@ -176,7 +175,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 	createPage({
 		path: `/404/`,
-		component: require.resolve(`./src/templates/404`),
+		component: EmptyTemplate,
 	})
 }
 

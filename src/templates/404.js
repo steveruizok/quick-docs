@@ -1,3 +1,4 @@
 import React from 'react'
+import Empty from '../components/404'
 
-export default () => <div>Not found</div>
+export default () => <Empty />
