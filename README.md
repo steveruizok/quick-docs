@@ -1,2 +1,3 @@
-# quick-docs
- Docs, quick.
+# Snap Docs
+
+Quick docs starter.
