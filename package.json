@@ -8,7 +8,8 @@
 	"keywords": [
 		"docs",
 		"documentation",
-		"gatsby"
+		"gatsby",
+		"theme"
 	],
 	"license": "MIT",
 	"scripts": {
