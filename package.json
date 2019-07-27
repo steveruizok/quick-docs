@@ -1,15 +1,15 @@
 {
 	"private": false,
-	"name": "quick-docs",
+	"name": "flow-docs",
 	"version": "0.0.1",
 	"main": "index.js",
 	"author": "Steve Ruiz <steveruizok@gmail.com>",
-	"repository": "https://github.com/steveruizok/quick-docs",
+	"repository": "https://github.com/steveruizok/flow-docs",
 	"keywords": [
 		"docs",
 		"documentation",
-		"gatsby",
-		"theme"
+		"framer x",
+		"flow"
 	],
 	"license": "MIT",
 	"scripts": {
