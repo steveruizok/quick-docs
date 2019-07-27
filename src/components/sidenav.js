@@ -20,7 +20,7 @@ export default React.forwardRef((props, ref) => (
 			px: 3,
 			pt: 3,
 			pb: 4,
-			mt: [77, 0],
+			mt: [73, 0],
 		}}
 	>
 		<Content />

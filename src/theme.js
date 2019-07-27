@@ -1,3 +1,5 @@
+import prismTheme from '@theme-ui/prism/presets/github.json'
+
 const heading = {
 	fontFamily: 'heading',
 	fontWeight: 'heading',
@@ -10,14 +12,15 @@ const heading = {
 
 export default {
 	breakpoints: ['52em', '90em', '100em'],
-	initialColorMode: 'light',
 	colors: {
 		text: '#000',
-		code: '#3a3a3f',
+		code: '#272727',
+		codeBg: '#f6f8fa',
+		codeHl: '#e7ebed',
 		background: '#fff',
 		primary: '#0059ff',
 		secondary: '#8855ff',
-		muted: '#fafafa',
+		muted: '#f2f2f2',
 		highlight: '#03d8ff',
 		gray: '#eeeeee',
 	},
@@ -84,23 +87,19 @@ export default {
 			},
 		},
 		pre: {
+			...prismTheme,
 			variant: 'prism',
 			maxWidth: '100%',
 			tabSize: 2,
 			fontFamily: 'monospace',
 			fontSize: 1,
 			p: 3,
-			color: 'code',
-			bg: 'muted',
 			borderRadius: 4,
-			borderWidth: '1px',
-			borderStyle: 'solid',
-			borderColor: 'gray',
 			overflow: 'scroll',
 			scroll: 'auto',
 			code: {
 				color: 'inherit',
-				bg: 'none',
+				bg: 'inherit',
 				border: 'none',
 				px: 0,
 				borderRadius: 0,
@@ -109,7 +108,7 @@ export default {
 		code: {
 			fontFamily: 'monospace',
 			color: 'code',
-			bg: 'muted',
+			bg: 'codeBg',
 			fontSize: 1,
 			// border: '1px solid #efefef',
 			px: 1,
@@ -153,70 +152,10 @@ export default {
 		},
 	},
 	prism: {
-		[['.regex', '.property-access', '.important', '.variable', '.parameter']]: {
-			color: '#444',
-		},
-		[[
-			'.cdata',
-			'.comment',
-			'.doctype',
-			'.entity',
-			'.operator',
-			'.prolog',
-			'.punctuation',
-			'.url',
-			'.operator',
-		]]: {
-			color: '#999999',
-		},
-		'.comment': {
-			fontStyle: 'italic',
-		},
-		[[
-			'.boolean',
-			'.class-name',
-			'.constant',
-			'.deleted',
-			'.function',
-			'.important',
-			'.property',
-			'.regex',
-			'.symbol',
-			'.tag',
-			'.variable',
-		]]: {
-			color: '#ff8800',
-		},
-		[['.number']]: {
-			color: '#ff8866',
-		},
-		[['.keyword', '.method']]: {
-			color: '#00bbcc',
-		},
-		[['.atrule', '.attr-value', '.keyword', '.maybe-class-name']]: {
-			color: '#0bf',
-		},
-		[['.important', '.bold']]: {
-			fontWeight: 500,
-		},
-		[['.italic']]: {
-			fontStyle: 'italic',
-		},
-		[['.entity']]: {
-			cursor: 'help',
-		},
-		[['.has-highlight-line .line:not(.highlight-line)']]: {
-			opacity: '0.25',
-		},
-		[[
-			'.attr-value',
-			'.builtin',
-			'.char',
-			'.inserted',
-			'.selector',
-			'.string',
-		]]: {
-			color: '#8855ff',
+		[['.gatsby-highlight-code-line']]: {
+			display: 'block',
+			fontWeight: 'bold',
+			backgroundColor: 'codeHl',
 		},
 	},
 }

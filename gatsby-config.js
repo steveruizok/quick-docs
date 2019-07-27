@@ -38,5 +38,14 @@ module.exports = {
 				],
 			},
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				start_url: `/`,
+				display: `standalone`,
+				icon: `content/images/icon.png`,
+				include_favicon: true,
+			},
+		},
 	],
 }
