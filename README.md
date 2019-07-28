@@ -11,10 +11,12 @@ A pop-up static site for documenting your things.
 
 ## Notes
 
-Thanks to John Otander for his work with
-[gatsby-plugin-documentation](https://github.com/johno/gatsby-theme-documentation)
-and [MDX](https://github.com/mdx-js/mdx), and to and Brent Jackson for
-[Theme UI](https://github.com/system-ui/theme-ui).
+Thanks to:
+
+- John Otander for his work with
+  [gatsby-plugin-documentation](https://github.com/johno/gatsby-theme-documentation) -
+  where this idea started - and [MDX](https://github.com/mdx-js/mdx)
+- Brent Jackson for [Theme UI](https://github.com/system-ui/theme-ui)
 
 ## Contribution
 
