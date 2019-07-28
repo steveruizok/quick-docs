@@ -2,7 +2,7 @@
 
 A pop-up static site for documenting your things.
 
-![quick docs image showing terminal](/content/assets/image.png)
+![quick docs image showing terminal](/content/assets/banner.png)
 
 ## Installation
 
