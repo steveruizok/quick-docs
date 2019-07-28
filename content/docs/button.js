@@ -8,7 +8,7 @@ export default (props) => {
 			style={{
 				fontSize: 16,
 				fontWeight: 600,
-				backgroundColor: '#0059ff',
+				backgroundColor: '#3333ff',
 				color: '#ffffff',
 				padding: '1rem 2rem',
 				outline: 'none',

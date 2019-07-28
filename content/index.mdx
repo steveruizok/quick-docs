@@ -1,10 +1,33 @@
 # Introduction
 
-Welcome to your new QuickDocs website.
+Welcome to QuickDocs, a pop-up static site for documenting your things.
 
-## Tour
+## Installation
 
-Let's take a quick tour of the project folder.
+To use QuickDocs:
+
+1. Install [Node.js](https://nodejs.org/en/).
+2. Open a new folder
+   [in your terminal app](https://www.groovypost.com/howto/open-command-window-terminal-window-specific-folder-windows-mac-linux/).
+3. Run `npx create-quick-docs`.
+4. Follow the instructions in the terminal.
+
+By default, this process will create your QuickDocs project in a new folder
+named `docs`. If you'd like your folder to be named something else, add the name
+like this:
+
+```
+npx create-quick-docs myDocs
+```
+
+Once installed, you can jump straight to editing, developing and publishing your
+docs.
+
+---
+
+## Your project folder
+
+Let's take a tour of the project folder.
 
 ### Content
 
@@ -12,45 +35,46 @@ Let's take a quick tour of the project folder.
 ├── content/ // highlight-line
 │   ├─ docs/
 │   ├─ nav/
+│   ├─ assets/
 │   └─ index.mdx
 └── src/
 ```
 
-The **Content** folder is where y ou define the content for your site. Any
+The **content** folder contains all of your projects's content. Any
 [Markdown React](https://mdxjs.com/) files (`.mdx`) will be automatically
-converted into pages like this one.
+converted into pages like this one. The page's URL will be determined by its
+path relative to the content folder.
 
-The page's URL will be determined by its path relative to the content folder.
-For example, `/content/docs/button.mdx` will turn into a page with the URL
-`myDocs.com/docs/button`.
+| Path                       | URL                                    |
+| -------------------------- | -------------------------------------- |
+| `/content/index.mdx`       | `http://www.your-site.com`             |
+| `/content/about.mdx`       | `http://www.your-site.com/about`       |
+| `/content/docs/index.mdx`  | `http://www.your-site.com/docs`        |
+| `/content/docs/button.mdx` | `http://www.your-site.com/docs/button` |
 
-The landing page (the one you're reading now) is defined at `index.mdx`. As with
-any folder, an `index.mdx` will be available at the parent folder's URL. For
-example, `/content/myFolder/index.mdx` would turn into a page with the url
-`myDocs.com/myFolder/`.
+Your project's navigation areas (header, sidebar, and footer) will pull content
+from the files contained in the **content/nav** folder.
 
-### Nav
+| File                       | Role            |
+| -------------------------- | --------------- |
+| `/content/nav/header.mdx`  | Header content  |
+| `/content/nav/sidebar.mdx` | Sidebar content |
+| `/content/nav/footer.mdx`  | Footer content  |
 
-```js
-├── content/
-│   ├─ docs/
-│   ├─ nav/  // highlight-line
-│   └─ index.mdx
-└── src/
-```
+> The sidebar's links are _not_ automatically generated. If you add a new page
+> to your project, you'll need to open `sidebar.mdx` and add a link to that
+> page.
 
-The **nav** folder (or rather, the `content/nav` folder) contains three files
-that define different parts of your website's navigation As the file names
-suggest:
+As with all `.mdx` files, you are free to include React components alongside
+standard Markdown. While you can `import` these components directly into the
+file, you may also use **shortcodes** as described in the next section.
 
-- `header.mdx` defines the page's header content,
-- `sidebar.mdx` defines the site's sidebar, and
-- `footer.mdx` defines the site's footer.
+| File                       | Notes                           |
+| -------------------------- | ------------------------------- |
+| `/content/docs/button.mdx` | Imports a component directly.   |
+| `/content/nav/header.mdx`  | Uses shortcodes for components. |
 
-The sidebar's links are _not_ automatically generated. If you add a new page to
-your project, you'll need to open `sidebar.mdx` and add a link to that page.
-
-### Src
+### Source
 
 ```js
 ├── content/
@@ -62,7 +86,7 @@ your project, you'll need to open `sidebar.mdx` and add a link to that page.
 ```
 
 The **src** folder contains the rest of the projects's source code. If you want
-to change how the site looks or works, then here's where to make those changes.
+to change how the site looks, works or behaves, you can make those changes here.
 
 This project uses a development that that includes:
 
@@ -72,6 +96,13 @@ This project uses a development that that includes:
 
 The easiest place to start would be `theme.js`, which defines the site's theme
 using the [System UI Theme Specification](https://theme-ui.com/theme-spec).
+
+To create **shortcodes** for React components that you'd like to use in your
+`.mdx` files, add these components to the `src/components.js` file.
+[Click here](https://mdxjs.com/blog/shortcodes/) for more information on
+shortcodes.
+
+---
 
 ## Editing
 
@@ -84,31 +115,39 @@ For editing, I recommend [Visual Studio Code](https://code.visualstudio.com/)
    [MDX plugin](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx).
 4. Edit or add `.mdx` files in your projects `content` folder.
 
-To see your changes live in the browser, you can start the project on a
+To see your changes live in the browser, you can start the project on a local
 development server. With the project folder open in VSCode:
 
 1. Open the integrated terminal by selecting **View > Terminal**.
 2. In the terminal, type `npm start` and press Enter.
-3. When the project is ready, open the url shown in your browser. Most likely,
-   this URL will be `http://localhost:8000/`.
+3. Wait for the start-up process to complete.
+4. Visit the server's local URL in your browser – most likely this is
+   `http://localhost:8000/`.
 
-To stop your server, press `control + c` in the terminal or just close your
-VSCode window.
+While the server is running, saving a changed file will update that part of your
+project.
+
+To stop the local server, press `control + c` in the terminal. You can also stop
+the server by closing your VSCode window.
+
+---
 
 ## Publishing
 
 To publish this project on the web, run `npm run build` in the terminal. This
 will create a production-ready website in your project's `public` folder. You
-have many ways to share this folder with the web, but here's one:
+have many ways to host this website, but here's one:
 
-- Run `npm run build` to create your `public` folder.
-- Open your browser and visit [Netlify Drop](http://netlify.com/drop).
-- Open your project folder in Finder.
-- Drag the entire `public` folder onto the Netlify Drop page.
+1. Run `npm run build` to create your `public` folder.
+2. Open your browser and visit [Netlify Drop](http://netlify.com/drop).
+3. Open your project folder in Finder.
+4. Drag the entire `public` folder onto the Netlify Drop page.
 
-This will create a hosted copy of your project. (The URL will be random, though
-you can change it under Site Settings.) You can read more about hosting on
-Netlify [here](https://www.gatsbyjs.org/docs/hosting-on-netlify/).
+This will create a hosted version of your project. (The URL will be random,
+though you can change it under Site Settings.) You can read more about hosting
+on Netlify [here](https://www.gatsbyjs.org/docs/hosting-on-netlify/).
+
+---
 
 ## Contribution
 

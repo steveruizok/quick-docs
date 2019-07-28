@@ -17,17 +17,17 @@ export default {
 		code: '#272727',
 		codeBg: '#f6f8fa',
 		codeHl: '#e7ebed',
+		muted: '#f6f8fa',
 		background: '#fff',
-		primary: '#0059ff',
+		primary: '#3333ff',
 		secondary: '#8855ff',
-		muted: '#f2f2f2',
 		highlight: '#03d8ff',
-		gray: '#eeeeee',
+		gray: '#d8dde3',
 	},
 	fonts: {
 		body: 'system-ui, sans-serif',
 		heading: 'system-ui, sans-serif',
-		monospace: 'Roboto Mono, Menlo, monospace',
+		monospace: 'Fira Code, Menlo, monospace',
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
 	fontWeights: {
@@ -45,6 +45,9 @@ export default {
 			fontSize: [5, 6, 7],
 			mt: 3,
 		},
+	},
+	borderStyles: {
+		quote: '1px solid secondary',
 	},
 	styles: {
 		Container: {
@@ -86,6 +89,14 @@ export default {
 				textDecoration: 'underline',
 			},
 		},
+		blockquote: {
+			m: 0,
+			borderLeft: (theme) => `1px solid ${theme.colors.gray}`,
+			pl: 4,
+			pr: 2,
+			py: 2,
+			fontStyle: 'italic',
+		},
 		pre: {
 			...prismTheme,
 			variant: 'prism',
@@ -109,6 +120,7 @@ export default {
 			fontFamily: 'monospace',
 			color: 'code',
 			bg: 'codeBg',
+			fontWeight: 500,
 			fontSize: 1,
 			// border: '1px solid #efefef',
 			px: 1,
@@ -141,11 +153,18 @@ export default {
 		},
 		hr: {
 			border: 0,
-			borderBottom: '1px solid',
-			borderColor: 'muted',
+			borderBottom: (theme) => `1px solid ${theme.colors.gray}`,
+			mx: 'auto',
+			my: 4,
+		},
+		ul: {
+			my: 2,
+		},
+		ol: {
+			my: 4,
 		},
 		li: {
-			my: 1,
+			mb: 2,
 		},
 		p: {
 			mb: 3,
@@ -154,7 +173,7 @@ export default {
 	prism: {
 		[['.gatsby-highlight-code-line']]: {
 			display: 'block',
-			fontWeight: 'bold',
+			fontWeight: '700',
 			backgroundColor: 'codeHl',
 		},
 	},

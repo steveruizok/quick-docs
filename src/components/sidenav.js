@@ -14,13 +14,14 @@ export default React.forwardRef((props, ref) => (
 		}}
 		ref={ref}
 		sx={{
-			width: 208,
-			mr: 3,
+			width: ['100%', 208],
 			flex: 'none',
-			px: 4,
-			pt: 3,
+			px: 3,
+			pt: 4,
 			pb: 4,
-			mt: [53, 0],
+			mx: 0,
+			mt: [57, 0],
+			transition: 'none',
 		}}
 	>
 		<Content />

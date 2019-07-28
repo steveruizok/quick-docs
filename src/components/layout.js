@@ -41,7 +41,12 @@ export default ({ children }) => {
 								onClick={() => setMenuOpen(false)}
 							/>
 							<div
-								sx={{ px: [3, 0], width: '100%', overflow: 'hidden', mb: 2 }}
+								sx={{
+									px: [3, 0],
+									width: '100%',
+									overflow: 'hidden',
+									mb: 2,
+								}}
 							>
 								{children}
 								<Footer />

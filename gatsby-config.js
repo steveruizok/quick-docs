@@ -26,16 +26,16 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			resolve: 'gatsby-plugin-webfonts',
 			options: {
-				fonts: [
-					{
-						family: `Roboto`,
-					},
-					{
-						family: `Roboto Mono`,
-					},
-				],
+				fonts: {
+					google: [
+						{
+							family: 'Fira Code',
+							variants: ['500', '700'],
+						},
+					],
+				},
 			},
 		},
 		{
@@ -43,7 +43,7 @@ module.exports = {
 			options: {
 				start_url: `/`,
 				display: `standalone`,
-				icon: `content/images/icon.png`,
+				icon: `content/assets/icon.png`,
 				include_favicon: true,
 			},
 		},

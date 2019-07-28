@@ -5,7 +5,9 @@ import isAbsoluteURL from 'is-absolute-url'
 
 const styles = {
 	display: 'block',
-	py: [3, 2],
+	py: 1,
+	px: [2, 3],
+	mx: 0,
 	color: 'inherit',
 	textDecoration: 'none',
 	fontSize: 2,
