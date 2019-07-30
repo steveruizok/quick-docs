@@ -14,8 +14,8 @@ Or
 
 ## Usage
 
-This project creates pages automatically for any `.md` or `.mdx` file located in
-the **/content** folder.
+This project creates pages automatically for any `.md` or `.mdx` files that are
+located in the **/content** folder.
 
 - Run `npm run start` or `yarn start` to start the development server
 - Add or edit `.md` or `.mdx` files in the **/content** folder
