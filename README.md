@@ -7,7 +7,22 @@ A pop-up static site for documenting your things.
 
 ## Installation
 
-`npx create-quick-docs myDocs`
+Automtic:
+
+1. `npx create-quick-docs myDocs`
+
+Manual:
+
+1. Download or clone this repo.
+2. From the project folder, run `npm install` or `yarn`
+
+- Start the local server with `npm run start` or `yarn start`.
+- Build to production with `npm run build` or `yarn build`.
+
+## Usage
+
+Edit content in the `content` folder. See the
+(demo)[(https://quick-docs.netlify.com/)] for more instructions.
 
 ## Notes
 
