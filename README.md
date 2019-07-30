@@ -7,7 +7,7 @@ A pop-up static site for documenting your things.
 
 `npx create-quick-docs`
 
-Or
+_or_
 
 1. Clone this repo or download and unzip
 2. From the project folder, run `npm install` or `yarn`
