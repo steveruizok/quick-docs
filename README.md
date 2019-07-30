@@ -5,7 +5,7 @@ A pop-up static site for documenting your things.
 
 ## Installation
 
-Automtic:
+Automatic:
 
 1. `npx create-quick-docs myDocs`
 
