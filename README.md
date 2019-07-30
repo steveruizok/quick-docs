@@ -19,8 +19,15 @@ Manual:
 
 ## Usage
 
-Edit content in the `content` folder. See the
-(demo)[(https://quick-docs.netlify.com/)] for more instructions.
+Start the local server with `npm run start` or `yarn start`.
+
+Edit content in the `content` folder.
+
+Edit navigation content in the `content/nav` folder.
+
+Build to production with `npm run build` or `yarn build`.
+
+See the (demo)[(https://quick-docs.netlify.com/)] for more instructions.
 
 ## Notes
 
