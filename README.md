@@ -19,11 +19,12 @@ Manual:
 This project creates pages automatically for any `.md` or `.mdx` file located in
 the `content` folder.
 
-- Run `npm run start` or `yarn start` to start the development server.
-- Add or edit `.md` or `.mdx` files in the `content` folder.
-- Edit navigation content in the `content/nav` folder.
-- Build to production with `npm run build` or `yarn build`.
-- Host the `public` folder anywhere on the web.
+- Run `npm run start` or `yarn start` to start the development server
+- Add or edit `.md` or `.mdx` files in the `content` folder
+- Edit navigation content in the `content/nav` folder
+- Edit the theme or source components in the 'src' folder
+- Build to production with `npm run build` or `yarn build`
+- Host the `public` folder anywhere on the web
 
 See the [demo](https://quick-docs.netlify.com/) for more detailed instructions.
 
