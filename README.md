@@ -11,7 +11,7 @@ Automatic:
 
 Manual:
 
-1. Clone this repo or download and unzip.
+1. Clone this repo or download and unzip
 2. From the project folder, run `npm install` or `yarn`
 
 ## Usage
