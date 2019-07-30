@@ -3,8 +3,6 @@
 A pop-up static site for documenting your things.
 [See the demo](https://quick-docs.netlify.com/).
 
-![quick docs image showing terminal](/content/assets/banner.png)
-
 ## Installation
 
 Automtic:
