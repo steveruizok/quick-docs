@@ -11,11 +11,8 @@ Automtic:
 
 Manual:
 
-1. Download or clone this repo.
+1. Clone this repo or download and unzip.
 2. From the project folder, run `npm install` or `yarn`
-
-- Start the local server with `npm run start` or `yarn start`.
-- Build to production with `npm run build` or `yarn build`.
 
 ## Usage
 
