@@ -1,42 +1,41 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { Link } from 'gatsby'
-import isAbsoluteURL from 'is-absolute-url'
+import { jsx } from "theme-ui";
+import { Link } from "gatsby";
+import isAbsoluteURL from "is-absolute-url";
 
 const styles = {
-	display: 'block',
+	display: "block",
 	py: 1,
-	px: [2, 3],
 	mx: 0,
-	color: 'inherit',
-	textDecoration: 'none',
+	color: "inherit",
+	textDecoration: "none",
 	fontSize: 2,
-	fontFamily: 'heading',
-	fontWeight: 'bold',
-	'&.active': {
-		color: 'primary',
+	fontFamily: "heading",
+	fontWeight: "bold",
+	"&.active": {
+		color: "primary"
 	},
-	'&:hover': {
-		textDecoration: 'underline',
-	},
-}
+	"&:hover": {
+		textDecoration: "underline"
+	}
+};
 
 export default ({ href, children, ...props }) => {
-	const isExternal = isAbsoluteURL(href || '')
+	const isExternal = isAbsoluteURL(href || "");
 
 	if (isExternal) {
 		return (
 			<a {...props} href={href} sx={styles}>
 				{children}
 			</a>
-		)
+		);
 	}
 
-	const to = props.to || href
+	const to = props.to || href;
 
 	return (
-		<Link {...props} to={to} sx={styles} activeClassName={'active'}>
+		<Link {...props} to={to} sx={styles} activeClassName={"active"}>
 			{children}
 		</Link>
-	)
-}
+	);
+};
